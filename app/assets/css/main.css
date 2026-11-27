@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Jetons de thème : seul ce bloc change d'un site à l'autre. */
+@theme {
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  --color-canvas: #f4f7f4;
+  --color-surface: #ffffff;
+  --color-ink: #13201a;
+  --color-muted: #5f6b64;
+  --color-line: #dfe7e1;
+  --color-accent: #1f7a4a;
+  --color-accent-ink: #17603a;
+  --color-cool: #0b7fab;
+  --color-leaf: #2f9a5a;
+  --radius-card: 1rem;
+  --shadow-card: 0 1px 2px rgb(19 32 26 / .05), 0 10px 28px -14px rgb(19 32 26 / .16);
+  --shadow-lift: 0 2px 4px rgb(19 32 26 / .06), 0 22px 44px -18px rgb(19 32 26 / .26);
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 5rem; }
+  body { @apply bg-canvas text-ink antialiased; font-optical-sizing: auto; }
+  ::selection { background: var(--color-accent); color: #fff; }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: .5rem; }
+}
+
+/* Exception justifiée : le contenu éditorial est rendu depuis des blocs de données,
+   une petite feuille « prose » évite de répéter les classes sur chaque élément. */
+@layer components {
+  .prose-cd { @apply text-[1.0625rem] leading-[1.65] text-ink/90; }
+  .prose-cd > * + * { margin-top: 1.1em; }
+  .prose-cd h2 { @apply text-[1.6rem] font-semibold leading-tight tracking-[-0.02em] text-ink mt-12; }
+  .prose-cd h3 { @apply text-xl font-semibold tracking-[-0.01em] text-ink mt-8; }
+  .prose-cd ul { @apply list-disc pl-5 space-y-1.5; }
+  .prose-cd ol { @apply list-decimal pl-5 space-y-1.5; }
+  .prose-cd a { @apply text-accent-ink underline decoration-accent/30 underline-offset-[3px] hover:decoration-accent; }
+  .prose-cd strong { @apply font-semibold text-ink; }
+}
+
+/* Mouvement : retour immédiat à l'appui, pas d'animation si l'utilisateur la refuse. */
+.press { transition: transform 120ms ease-out, box-shadow 200ms ease-out; }
+.press:active { transform: scale(.97); }
+@media (prefers-reduced-motion: reduce) {
+  .press, .press:active { transition: none; transform: none; }
+  html { scroll-behavior: auto; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .glass { background: var(--color-canvas) !important; backdrop-filter: none !important; }
+}
