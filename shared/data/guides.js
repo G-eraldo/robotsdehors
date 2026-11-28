@@ -71,7 +71,7 @@ export const guides = [
         "p": "La méthode la plus simple ne demande qu'un niveau et un mètre :"
       },
       {
-        "p": "```text pente (%) = hauteur (cm) ÷ distance horizontale (cm) × 100 Exemple : 60 cm de montée sur 300 cm de longueur = 20 % ```"
+        "p": "pente (%) = hauteur (cm) ÷ distance horizontale (cm) × 100. Exemple : 60 cm de montée sur 300 cm de longueur = 20 %."
       },
       {
         "p": "Mesurez **la partie la plus raide**, pas la moyenne du terrain : c'est là que le robot patinera ou s'arrêtera. Un téléphone avec un niveau à bulle donne des degrés, à convertir ensuite (tableau ci-dessus). Refaites la mesure à l'endroit où l'herbe reste humide plus longtemps : c'est souvent la même zone, et c'est celle qui décidera de l'achat."
