@@ -44,6 +44,7 @@ usePageSeo({
     </header>
 
     <div class="mx-auto max-w-6xl px-5 sm:px-8">
+      <p class="mb-8 max-w-3xl text-sm text-muted">En tant que Partenaire Amazon, {{ site.name }} réalise un bénéfice sur les achats remplissant les conditions requises. Cela ne change pas le prix payé.</p>
       <section v-if="picks.length" aria-labelledby="en-bref">
         <h2 id="en-bref" class="text-[clamp(1.4rem,2.6vw,1.8rem)] font-semibold tracking-[-0.025em]">En bref : notre choix selon votre cas</h2>
         <p class="mt-1.5 text-sm text-muted">Choix fondés sur les caractéristiques publiées par les fabricants, pas sur un essai.</p>
@@ -72,7 +73,7 @@ usePageSeo({
 
       <section v-if="products.length > 1" class="mt-20">
         <h2 class="text-[clamp(1.6rem,3vw,2.2rem)] font-semibold tracking-[-0.03em]">Quelles différences entre les modèles ?</h2>
-        <div class="-mx-5 mt-6 overflow-x-auto px-5 sm:mx-0 sm:px-0">
+        <div class="relative -mx-5 mt-6 overflow-x-auto px-5 sm:mx-0 sm:px-0">
           <table class="w-full min-w-[44rem] border-separate border-spacing-0 overflow-hidden rounded-[var(--radius-card)] bg-surface text-left text-[0.9rem] shadow-card">
             <thead>
               <tr>
