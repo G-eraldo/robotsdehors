@@ -1,6 +1,6 @@
 <script setup>
 // Rend un contenu éditorial décrit en blocs : { p | h2 | h3 | ul | ol | table | callout }.
-// Le texte peut contenir des liens internes au format [libellé](/chemin) et du **gras**.
+// Le texte peut contenir des liens internes au format [libellé](/chemin), du **gras** et de l'*italique*.
 defineProps({ blocks: { type: Array, required: true } })
 
 function esc(s) {
@@ -9,6 +9,7 @@ function esc(s) {
 function inline(s) {
   return esc(s)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*\w])\*(?=\S)([^*]+?)(?<=\S)\*(?!\*)/g, '$1<em>$2</em>')
     .replace(/\[([^\]]+)\]\((\/[^)\s]*|https:\/\/[^)\s]+)\)/g, (_, label, href) =>
       href.startsWith('/') ? `<a href="${href}">${label}</a>` : `<a href="${href}" target="_blank" rel="noopener">${label}</a>`)
 }
