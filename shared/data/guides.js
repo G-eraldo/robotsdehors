@@ -1,5 +1,271 @@
 // Guides et contenus des pages rubriques. Méthode de choix ; aucun test revendiqué.
 export const guides = [
+  {
+    "slug": "tondeuse-robot-pente",
+    "category": "tondeuse",
+    "kicker": "Guide",
+    "short": "Tondeuse robot en pente : ce que veulent dire 27 %, 45 % et 80 %",
+    "title": "Tondeuse robot en pente : ce que veulent dire 27 %, 45 % et 80 %",
+    "metaTitle": "Tondeuse robot en pente : quel modèle",
+    "description": "Tondeuse robot et pente : ce que signifient 27 %, 45 % ou 80 %, comment mesurer son terrain et quel robot pour quel dénivelé. Sept modèles documentés.",
+    "answer": "Une pente se mesure en pourcentage, pas en degrés : 45 % correspond à 24°, et 80 % à 39°. Aucun robot de notre sélection n'atteint 45° (100 %). Le chiffre constructeur est un maximum sur terrain sec et adhérent ; la motricité, les pneus et l'herbe mouillée comptent autant que la valeur annoncée.",
+    "publishedAt": "2026-11-28",
+    "updatedAt": "2026-11-28",
+    "products": [
+      "worx-landroid-plus-wr165e",
+      "bosch-indego-m-plus-700",
+      "gardena-sileno-life-1000",
+      "segway-navimow-i205-awd",
+      "ecovacs-goat-o600-rtk",
+      "dreame-a1-pro",
+      "mammotion-luba-mini-2-awd-1000"
+    ],
+    "body": [
+      {
+        "p": "En tant que Partenaire Amazon, Le Robot Idéal réalise un bénéfice sur les achats remplissant les conditions requises. Cela ne change pas le prix payé."
+      },
+      {
+        "h2": "1. Pourcentage ou degrés : la confusion qui coûte cher"
+      },
+      {
+        "p": "Une pente de 45 % monte de 45 cm sur 100 cm de distance horizontale. En degrés, cela fait 24,2°. La conversion est un simple arc tangente :"
+      },
+      {
+        "table": {
+          "head": [
+            "Pente annoncée",
+            "Angle réel",
+            "Ce que ça représente"
+          ],
+          "rows": [
+            [
+              "27 %",
+              "15,1°",
+              "Pente douce, terrain de jardin classique"
+            ],
+            [
+              "35 %",
+              "19,3°",
+              "Pente marquée mais courante"
+            ],
+            [
+              "45 %",
+              "24,2°",
+              "Terrain franchement pentu"
+            ],
+            [
+              "80 %",
+              "38,7°",
+              "Talus, butte, terrain très difficile"
+            ]
+          ]
+        }
+      },
+      {
+        "p": "La requête « tondeuse robot pente 45 degrés » est fréquente, et elle est piégeuse : un robot annoncé à 45 % ne monte pas une pente à 45°. Il lui faudrait 100 %. Les fabricants qui communiquent en degrés utilisent souvent la même valeur commerciale, ce qui entretient la confusion."
+      },
+      {
+        "h2": "2. Mesurer sa pente en cinq minutes"
+      },
+      {
+        "p": "La méthode la plus simple ne demande qu'un niveau et un mètre :"
+      },
+      {
+        "p": "pente (%) = hauteur (cm) ÷ distance horizontale (cm) × 100. Exemple : 60 cm de montée sur 300 cm de longueur = 20 %."
+      },
+      {
+        "p": "Mesurez **la partie la plus raide**, pas la moyenne du terrain : c'est là que le robot patinera ou s'arrêtera. Un téléphone avec un niveau à bulle donne des degrés, à convertir ensuite (tableau ci-dessus). Refaites la mesure à l'endroit où l'herbe reste humide plus longtemps : c'est souvent la même zone, et c'est celle qui décidera de l'achat."
+      },
+      {
+        "h2": "3. Les sept robots et leur limite annoncée"
+      },
+      {
+        "table": {
+          "head": [
+            "Modèle",
+            "Guidage",
+            "Surface max",
+            "Pente max",
+            "Transmission",
+            "Coupe",
+            "Bruit"
+          ],
+          "rows": [
+            [
+              "[Worx Landroid Plus WR165E](/robots-tondeuses/worx-landroid-plus-wr165e)",
+              "Fil périmétrique",
+              "500 m²",
+              "35 %",
+              "2 roues motrices",
+              "18 cm",
+              "Non communiqué"
+            ],
+            [
+              "[Bosch Indego M+ 700](/robots-tondeuses/bosch-indego-m-plus-700)",
+              "Fil + cartographie",
+              "700 m²",
+              "27 %",
+              "Non précisée",
+              "19 cm",
+              "63 dB"
+            ],
+            [
+              "[Gardena SILENO life 1000](/robots-tondeuses/gardena-sileno-life-1000)",
+              "Fil périmétrique",
+              "1 000 m²",
+              "35 %",
+              "Non précisée",
+              "22 cm",
+              "Non communiqué"
+            ],
+            [
+              "[Segway Navimow i205 AWD](/robots-tondeuses/segway-navimow-i205-awd)",
+              "RTK réseau + caméra, sans fil ni antenne",
+              "500 m²",
+              "45 %",
+              "3 roues motrices",
+              "18 cm",
+              "59 dB"
+            ],
+            [
+              "[Ecovacs GOAT O600 RTK](/robots-tondeuses/ecovacs-goat-o600-rtk)",
+              "RTK + vision",
+              "600 m²",
+              "45 %",
+              "Non précisée",
+              "Non confirmée",
+              "58 dB"
+            ],
+            [
+              "[Dreame A1 Pro](/robots-tondeuses/dreame-a1-pro)",
+              "LiDAR 3D, ni fil ni RTK",
+              "2 000 m²",
+              "45 %",
+              "Non précisée",
+              "22 cm",
+              "Non communiqué"
+            ],
+            [
+              "[Mammotion LUBA mini 2 AWD](/robots-tondeuses/mammotion-luba-mini-2-awd-1000)",
+              "RTK réseau + 3 caméras",
+              "1 000 m²",
+              "80 % annoncés",
+              "Roues motrices intégrales",
+              "20 cm + bordure 12 cm",
+              "58 dB"
+            ]
+          ]
+        }
+      },
+      {
+        "p": "Deux précautions de lecture. D'abord, **« transmission non précisée » n'est pas un oubli** : sans mention de roues motrices, la motricité ne se déduit pas de la fiche. Ensuite, les **deux modèles à motricité intégrale documentée** affichent 45 % et plus ; pour les deux autres à 45 %, la transmission n'est pas documentée par le fabricant, et rien ne permet de la supposer."
+      },
+      {
+        "h2": "4. Le gagnant par usage"
+      },
+      {
+        "table": {
+          "head": [
+            "Votre terrain",
+            "Robot",
+            "Pourquoi"
+          ],
+          "rows": [
+            [
+              "Plat ou légère pente, jusqu'à 500 m², budget serré",
+              "Worx Landroid Plus WR165E",
+              "Fil et 35 %, aucun abonnement, batterie partagée avec l'outillage Worx"
+            ],
+            [
+              "Jusqu'à 700 m², pente douce (≤ 27 %), tonte régulière",
+              "Bosch Indego M+ 700",
+              "Tonte en lignes parallèles plutôt qu'aléatoire"
+            ],
+            [
+              "Jusqu'à 1 000 m², pente ≤ 35 %, pas d'appli",
+              "Gardena SILENO life 1000",
+              "Grande surface filaire simple ; vérifier la disponibilité, gamme en fin de cycle"
+            ],
+            [
+              "30 à 45 %, petit jardin, sans installation de fil",
+              "Segway Navimow i205 AWD",
+              "3 roues motrices, ni fil ni antenne ; abonnement cellulaire après un an"
+            ],
+            [
+              "45 %, jardin encombré (jeux, mobilier, animaux)",
+              "Ecovacs GOAT O600 RTK",
+              "Détection d'obstacles par caméra ; vérifier si la station RTK est fournie"
+            ],
+            [
+              "45 %, grand terrain sous les arbres",
+              "Dreame A1 Pro",
+              "LiDAR : ne dépend ni du GPS ni du réseau ; module cellulaire en option"
+            ],
+            [
+              "Au-delà de 45 %, talus",
+              "Mammotion LUBA mini 2 AWD",
+              "80 % annoncés, roues intégrales ; valeur constructeur, pas un essai"
+            ]
+          ]
+        }
+      },
+      {
+        "h2": "5. Ce qui compte au-delà du chiffre"
+      },
+      {
+        "p": "**L'adhérence réelle.** Un robot annoncé à 45 % peut patiner sur herbe grasse, sur terre meuble après la pluie ou en tonte transversale. Les constructeurs mesurent sur un terrain sec et préparé. Si votre pente est humide, prévoyez une marge : un robot donné pour 45 % sur une pente à 35 % est plus crédible qu'un 35 % sur une pente à 35 %."
+      },
+      {
+        "p": "**Le sens de tonte.** Un robot qui attaque la pente en diagonale la monte mieux qu'en montée frontale, mais laisse des traces. Les modèles AWD gèrent ces trajectoires ; les autres peuvent nécessiter un réglage manuel des zones."
+      },
+      {
+        "p": "**Le guidage et son environnement.** Le RTK a besoin de voir le ciel : sous des arbres ou entre des murs hauts, la précision se dégrade. Le LiDAR du Dreame A1 Pro contourne cette limite, au prix d'un robot plus volumineux. Le fil reste le plus prévisible, mais il faut le poser — comptez une demi-journée sur un terrain simple."
+      },
+      {
+        "p": "**Le coût caché du sans-fil.** Le positionnement par réseau cellulaire suppose un abonnement après la période offerte : 29,90 €/an annoncés par Navimow après la première année (valeur relevée le 27/11/2026), 4G incluse trois ans chez Mammotion sans conditions précisées ensuite, module cellulaire en option chez Dreame. Le filaire n'a pas cette ligne de dépense, mais il a le fil."
+      },
+      {
+        "p": "**La sécurité.** Sur une pente forte, un robot qui glisse sort de sa zone. Vérifiez la présence d'un capteur de limite, d'une alarme de levage et d'un code PIN ; ce sont les points qui protègent aussi contre le vol."
+      },
+      {
+        "h2": "6. Questions fréquentes"
+      },
+      {
+        "p": "**Une tondeuse robot peut-elle monter 45 degrés ?** Aucun modèle de cette sélection. 45° = 100 % de pente ; les robots plafonnent à 45 % (24°) ou 80 % annoncés (39°)."
+      },
+      {
+        "p": "**Jusqu'à quelle pente avec un robot filaire ?** Les trois filaires de la sélection sont donnés pour 27 à 35 %. Au-delà, il faut regarder du côté des modèles AWD."
+      },
+      {
+        "p": "**Faut-il forcément un AWD ?** Pas sous 30 %. Au-delà, la motricité devient le critère principal, avant la surface et l'autonomie."
+      },
+      {
+        "p": "**Et si l'herbe est mouillée ?** La pente maximale annoncée ne tient plus. Soit vous tondez plus souvent et plus court pour limiter la glissance, soit vous prenez une marge importante sur le chiffre constructeur."
+      },
+      {
+        "p": "**Où installer une station RTK ?** Dégagée, avec vue sur la zone de tonte, à l'écart des arbres et des murs. Sur certains modèles, la présence de la station dans la boîte n'est pas précisée : à vérifier avant l'achat."
+      },
+      {
+        "p": "**Un robot peut-il tondre un talus sans le tondre en travers ?** Oui, en le traitant en zones ou en le laissant en bordure. À configurer dans l'application, et à valider sur votre terrain : c'est le genre de réglage qui ne se lit pas sur une fiche."
+      },
+      {
+        "h2": "Sources"
+      },
+      {
+        "ul": [
+          "Fiches produit Le Robot Idéal des sept modèles cités, valeurs reprises des sites fabricants et d'Amazon.fr, vérifiées le 27/11/2026.",
+          "Conversion pourcentage → degrés : arctangente (45 % = 24,2°, 80 % = 38,7°), calcul arithmétique.",
+          "Conditions d'abonnement Navimow (29,90 €/an après la première année) : valeur constructeur reprise de la fiche Le Robot Idéal du Navimow i205 AWD, relevée le 27/11/2026 ; non revérifiée sur le site du fabricant le 28/11/2026."
+        ]
+      },
+      {
+        "p": "*Le Robot Idéal n'a pas testé ces appareils. Les pentes indiquées sont des valeurs constructeur, pas des mesures ; aucune tonte n'a été réalisée sur terrain pentu pour ce guide.*"
+      },
+      {
+        "p": "Pour le choix des critères dans l'ordre : [quel robot tondeuse choisir](/guides/quel-robot-tondeuse-choisir), et pour la technologie de guidage : [avec ou sans fil périmétrique](/guides/robot-tondeuse-avec-ou-sans-fil)."
+      }
+    ]
+  },
   // ——— Robots tondeuses ———
   {
     slug: 'quel-robot-tondeuse-choisir', category: 'tondeuse', featured: true,
