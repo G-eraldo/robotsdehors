@@ -30,7 +30,8 @@ export function usePageSeo({ title, description, path, type = 'website', noindex
     ogUrl: url,
     ogSiteName: site.name,
     ogLocale: 'fr_FR',
-    twitterCard: 'summary',
+    ogImage: `${base}/og.png`,
+    twitterCard: 'summary_large_image',
     robots: live && !noindex ? 'index,follow,max-image-preview:large' : 'noindex,follow'
   })
   useHead({
