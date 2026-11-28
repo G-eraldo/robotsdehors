@@ -6,8 +6,8 @@ export const guides = [
     "kicker": "Guide",
     "short": "Tondeuse robot en pente : ce que veulent dire 27 %, 45 % et 80 %",
     "title": "Tondeuse robot en pente : ce que veulent dire 27 %, 45 % et 80 %",
-    "metaTitle": "Tondeuse robot en pente : 27 %, 45 % ou 80 %, que choisir",
-    "description": "Tondeuse robot et pente : ce que signifient 27 %, 45 % ou 80 %, comment mesurer votre terrain, et quel robot pour quel dénivelé. Sélection de 7 modèles documentés.",
+    "metaTitle": "Tondeuse robot en pente : quel modèle",
+    "description": "Tondeuse robot et pente : ce que signifient 27 %, 45 % ou 80 %, comment mesurer son terrain et quel robot pour quel dénivelé. Sept modèles documentés.",
     "answer": "Une pente se mesure en pourcentage, pas en degrés : 45 % correspond à 24°, et 80 % à 39°. Aucun robot de notre sélection n'atteint 45° (100 %). Le chiffre constructeur est un maximum sur terrain sec et adhérent ; la motricité, les pneus et l'herbe mouillée comptent autant que la valeur annoncée.",
     "publishedAt": "2026-11-28",
     "updatedAt": "2026-11-28",
@@ -158,7 +158,7 @@ export const guides = [
         }
       },
       {
-        "p": "Deux précautions de lecture. D'abord, **« transmission non précisée » n'est pas un oubli** : sans mention de roues motrices, on ne peut pas déduire la motricité depuis la fiche. Ensuite, les modèles **AWD** (deux ou quatre roues motrices) sont les seuls à afficher 45 % et plus : ce n'est pas un hasard."
+        "p": "Deux précautions de lecture. D'abord, **« transmission non précisée » n'est pas un oubli** : sans mention de roues motrices, la motricité ne se déduit pas de la fiche. Ensuite, les **deux modèles à motricité intégrale documentée** affichent 45 % et plus ; pour les deux autres à 45 %, la transmission n'est pas documentée par le fabricant, et rien ne permet de la supposer."
       },
       {
         "h2": "4. Le gagnant par usage"
@@ -222,7 +222,7 @@ export const guides = [
         "p": "**Le guidage et son environnement.** Le RTK a besoin de voir le ciel : sous des arbres ou entre des murs hauts, la précision se dégrade. Le LiDAR du Dreame A1 Pro contourne cette limite, au prix d'un robot plus volumineux. Le fil reste le plus prévisible, mais il faut le poser — comptez une demi-journée sur un terrain simple."
       },
       {
-        "p": "**Le coût caché du sans-fil.** Le positionnement par réseau cellulaire suppose un abonnement après la période offerte : 29,90 €/an selon Navimow après un an, 4G incluse trois ans chez Mammotion sans conditions précisées ensuite, module cellulaire en option chez Dreame. Le filaire n'a pas cette ligne de dépense, mais il a le fil."
+        "p": "**Le coût caché du sans-fil.** Le positionnement par réseau cellulaire suppose un abonnement après la période offerte : 29,90 €/an annoncés par Navimow après la première année (valeur relevée le 27/11/2026), 4G incluse trois ans chez Mammotion sans conditions précisées ensuite, module cellulaire en option chez Dreame. Le filaire n'a pas cette ligne de dépense, mais il a le fil."
       },
       {
         "p": "**La sécurité.** Sur une pente forte, un robot qui glisse sort de sa zone. Vérifiez la présence d'un capteur de limite, d'une alarme de levage et d'un code PIN ; ce sont les points qui protègent aussi contre le vol."
@@ -255,7 +255,7 @@ export const guides = [
         "ul": [
           "Fiches produit Le Robot Idéal des sept modèles cités, valeurs reprises des sites fabricants et d'Amazon.fr, vérifiées le 27/11/2026.",
           "Conversion pourcentage → degrés : arctangente (45 % = 24,2°, 80 % = 38,7°), calcul arithmétique.",
-          "Conditions d'abonnement Navimow (29,90 €/an après un an) : site Navimow France, vérifié le 27/11/2026."
+          "Conditions d'abonnement Navimow (29,90 €/an après la première année) : valeur constructeur reprise de la fiche Le Robot Idéal du Navimow i205 AWD, relevée le 27/11/2026 ; non revérifiée sur le site du fabricant le 28/11/2026."
         ]
       },
       {
@@ -276,11 +276,11 @@ export const guides = [
     answer: 'Partez de votre terrain : surface réelle avec une marge de 20 à 30 %, pente la plus forte, présence d’arbres et de zones séparées. Jardin simple et dégagé : un robot à fil suffit. Pentes fortes, plusieurs zones ou envie de ne rien installer : un robot sans fil (RTK, vision ou LiDAR), en vérifiant la couverture satellite ou mobile.',
     products: ['worx-landroid-plus-wr165e', 'segway-navimow-i205-awd', 'dreame-a1-pro'],
     body: [
-      { h2: '1. La surface, avec de la marge' },
+      { h2: 'Quelle surface de tonte prévoir ?' },
       { p: 'La surface maximale annoncée suppose un terrain simple et un robot qui tond presque tous les jours. Avec des massifs, des recoins ou une pelouse qui pousse vite au printemps, prenez un modèle dont la capacité dépasse votre surface de 20 à 30 %.' },
-      { h2: '2. La pente la plus forte' },
+      { h2: 'Quelle pente le robot doit-il gravir ?' },
       { p: 'Repérez la pente la plus raide du terrain, pas la moyenne. Une pente de 35 % correspond à 35 cm de dénivelé sur 1 m à l’horizontale. Au-delà de 35 à 40 %, regardez les robots à roues motrices intégrales (AWD).' },
-      { h2: '3. Le guidage : fil, satellite ou capteurs' },
+      { h2: 'Fil, satellite ou capteurs : quel guidage ?' },
       { table: { head: ['Guidage', 'Installation', 'Atouts', 'Points de vigilance'], rows: [
         ['Fil périmétrique', 'Fil à poser ou enterrer autour de la pelouse', 'Fiable, indépendant du ciel et du réseau', 'Pose longue, fil à réparer s’il est coupé'],
         ['RTK avec antenne', 'Antenne à placer, zones dessinées dans l’appli', 'Tonte en lignes, zones multiples', 'Signal satellite gêné par les arbres et les murs'],
@@ -288,9 +288,9 @@ export const guides = [
         ['Vision / LiDAR', 'Cartographie par capteurs', 'À l’aise sous les arbres', 'Technologie récente, réglages dans l’appli']
       ] } },
       { p: 'Le détail est dans [robot tondeuse avec ou sans fil](/guides/robot-tondeuse-avec-ou-sans-fil).' },
-      { h2: '4. Les zones et passages' },
+      { h2: 'Votre jardin a-t-il plusieurs zones ?' },
       { p: 'Plusieurs pelouses reliées par un passage étroit, un portillon, une allée ? Vérifiez la largeur minimale de passage indiquée dans la notice et la gestion des zones multiples. Les robots sans fil gèrent généralement mieux plusieurs zones que les robots filaires d’entrée de gamme.' },
-      { h2: '5. Sécurité, antivol et voisinage' },
+      { h2: 'Quelles sécurités exiger ?' },
       { ul: [
         '**Capteurs de levage et d’inclinaison** : la lame s’arrête quand le robot est soulevé.',
         '**Antivol** : code PIN au minimum ; alarme et localisation GPS sur les modèles connectés.',
@@ -309,11 +309,11 @@ export const guides = [
     answer: 'Le fil reste le plus fiable sur un terrain simple et dégagé, mais demande une installation. Le sans-fil (RTK) évite la pose et tond en lignes, à condition d’avoir assez de ciel dégagé. Sous beaucoup d’arbres ou entre des murs, préférez un robot guidé par caméra ou LiDAR.',
     products: ['bosch-indego-m-plus-700', 'mammotion-luba-mini-2-awd-1000', 'ecovacs-goat-o600-rtk', 'dreame-a1-pro'],
     body: [
-      { h2: 'Le fil périmétrique' },
+      { h2: 'Comment fonctionne le fil périmétrique ?' },
       { p: 'Un fil basse tension, posé au sol avec des cavaliers ou enterré, délimite la zone à tondre. Le robot le détecte et ne le franchit pas. C’est éprouvé et indépendant du ciel ou du réseau. En contrepartie : une pose qui prend du temps, et un fil qu’il faut réparer s’il est coupé par une bêche ou un scarificateur.' },
-      { h2: 'Le RTK : le GPS au centimètre' },
+      { h2: 'Qu’est-ce que le RTK ?' },
       { p: 'Le RTK corrige la position satellite pour atteindre une précision de quelques centimètres. Deux variantes : une **antenne** à installer chez vous, ou une **correction par le réseau** mobile (NRTK), sans antenne. Dans les deux cas, le robot a besoin de voir une bonne part du ciel. Grands arbres, murs hauts ou abri de jardin peuvent créer des zones où il perd sa précision.' },
-      { h2: 'Caméras et LiDAR' },
+      { h2: 'Et les robots à caméra ou LiDAR ?' },
       { p: 'Certains robots se repèrent avec des caméras ou un LiDAR (un capteur laser qui mesure les distances). Ils n’ont pas besoin du ciel, ce qui les rend intéressants sous les arbres. Beaucoup de modèles récents combinent RTK et vision pour cumuler les avantages.' },
       { table: { head: ['Votre terrain', 'Guidage conseillé'], rows: [
         ['Pelouse simple, dégagée, une seule zone', 'Fil périmétrique ou RTK'],
@@ -321,7 +321,7 @@ export const guides = [
         ['Beaucoup d’arbres, murs hauts', 'Vision ou LiDAR, ou RTK + vision'],
         ['Couverture mobile faible au jardin', 'Fil, RTK avec antenne ou LiDAR (pas de RTK réseau)']
       ] } },
-      { h2: 'Les coûts cachés' },
+      { h2: 'Quels coûts prévoir après l’achat ?' },
       { ul: ['**Abonnement cellulaire** sur certains modèles connectés en 4G, parfois gratuit la première année seulement.', '**Lames** de rechange, à changer régulièrement.', '**Fil et cavaliers** supplémentaires si vous agrandissez la zone.'] }
     ]
   },
@@ -336,18 +336,18 @@ export const guides = [
     answer: 'Vérifiez d’abord que le robot est compatible avec votre type de bassin (enterré, hors-sol rigide ou souple) et sa longueur. Prenez un modèle qui nettoie fond, parois et ligne d’eau si votre bassin a des parois verticales. Filaire pour la puissance et les longs cycles, sans fil pour la simplicité.',
     products: ['zodiac-cnx-20', 'dolphin-liberty-300', 'beatbot-aquasense-2'],
     body: [
-      { h2: '1. Le type et la taille du bassin' },
+      { h2: 'Le robot est-il compatible avec votre bassin ?' },
       { p: 'C’est le critère éliminatoire. Un robot prévu pour une piscine enterrée peut ne pas convenir à un hors-sol à parois souples. Vérifiez aussi la longueur maximale ou la surface du bassin : pour un modèle filaire, la longueur de câble doit permettre d’atteindre le point le plus éloigné.' },
-      { h2: '2. Les zones nettoyées' },
+      { h2: 'Quelles zones doit-il nettoyer ?' },
       { table: { head: ['Nettoie', 'Pour qui'], rows: [
         ['Fond seul', 'Petits bassins, budget serré'],
         ['Fond + parois', 'La plupart des bassins enterrés et hors-sol rigides'],
         ['Fond + parois + ligne d’eau', 'Bassins où la ligne d’eau s’encrasse (crème solaire, pollens)'],
         ['Surface (skimmer)', 'En complément, sous les arbres']
       ] } },
-      { h2: '3. Filaire ou sur batterie' },
+      { h2: 'Filaire ou sur batterie ?' },
       { p: 'Le filaire offre des cycles longs et une puissance constante, au prix d’un câble à gérer. Le sans-fil est plus simple à lancer, mais son autonomie limite la surface couverte et il faut le sortir de l’eau pour le recharger. Détails dans [filaire ou sans fil](/guides/robot-piscine-filaire-ou-sans-fil).' },
-      { h2: '4. Filtration et entretien' },
+      { h2: 'Quelle filtration et quel entretien ?' },
       { ul: [
         '**Finesse de filtration** en microns : plus le chiffre est bas, plus les particules retenues sont fines. Les filtres fins se colmatent aussi plus vite.',
         '**Volume du panier** : un grand panier se vide moins souvent, utile au printemps et en automne.',
@@ -365,7 +365,7 @@ export const guides = [
     answer: 'Filaire si votre bassin est grand ou si vous voulez des cycles longs sans vous soucier de la charge. Sans fil si vous voulez lancer le robot en dix secondes, sans câble qui s’emmêle, et que son autonomie couvre votre bassin.',
     products: ['zodiac-tornax-gt3220', 'dolphin-nautilus-cc-pro', 'wybot-c1', 'aiper-scuba-s1'],
     body: [
-      { h2: 'Ce qui change au quotidien' },
+      { h2: 'Qu’est-ce qui change au quotidien ?' },
       { table: { head: ['', 'Filaire', 'Sans fil'], rows: [
         ['Mise en route', 'Brancher le boîtier, dérouler le câble', 'Poser le robot dans l’eau'],
         ['Durée de nettoyage', 'Cycles programmés, puissance constante', 'Limitée par la batterie'],
@@ -373,9 +373,9 @@ export const guides = [
         ['Câble', 'Peut s’entortiller avec le temps', 'Aucun'],
         ['Recharge', 'Aucune', 'Robot à sortir et recharger (sauf rares exceptions)']
       ] } },
-      { h2: 'La vraie contrainte du sans-fil : la sortie de l’eau' },
+      { h2: 'Comment sortir un robot sans fil de l’eau ?' },
       { p: 'Un robot sans fil doit être récupéré pour être rechargé. Certains reviennent vers le bord ou remontent seuls à la surface en fin de cycle, ce qui évite de les pêcher avec un crochet. C’est un critère de confort majeur si vous le lancez souvent.' },
-      { h2: 'Comment trancher' },
+      { h2: 'Alors, filaire ou sans fil ?' },
       { ul: ['Bassin de plus de 10 m ou très fréquenté : un filaire à long cycle.', 'Usage simple, plusieurs fois par semaine : un sans-fil avec retour au bord ou remontée automatique.', 'Sous les arbres : ajoutez un skimmer de surface, quel que soit le robot principal.'] }
     ]
   }
@@ -388,10 +388,12 @@ export const hubs = {
     metaTitle: 'Robot tondeuse : comparatif avec et sans fil',
     description: 'Sept robots tondeuses comparés : fil périmétrique, RTK, vision et LiDAR. Surface, pente, hauteur de coupe, avec leurs limites.',
     lead: 'Fil ou pas fil, petit ou grand terrain, pentes et arbres : sept robots comparés sur les données de leurs fabricants.',
-    quick: [
-      { label: 'Petit jardin simple', title: 'Fil périmétrique', text: 'Fiable et indépendant du ciel. Une demi-journée de pose.' },
-      { label: 'Plusieurs zones', title: 'Sans fil RTK', text: 'Rien à poser, tonte en lignes. Il faut du ciel dégagé.' },
-      { label: 'Sous les arbres', title: 'Vision ou LiDAR', text: 'Se repère sans satellite, à l’aise près des haies et des murs.' }
+    updatedAt: '2026-11-28',
+    picks: [
+      { label: 'Petit jardin simple', slug: 'worx-landroid-plus-wr165e', why: 'Jusqu’à 500 m² avec fil : fiable, indépendant du ciel et du réseau, appli et capteur de pluie.' },
+      { label: 'Rien à installer', slug: 'segway-navimow-i205-awd', why: 'Ni fil ni antenne (RTK réseau + caméra), 3 roues motrices, jusqu’à 500 m² et 45 % de pente.' },
+      { label: 'Terrain très pentu', slug: 'mammotion-luba-mini-2-awd-1000', why: 'La plus forte pente annoncée de la sélection (80 %), jusqu’à 1 000 m², disque de bordure.' },
+      { label: 'Grand terrain arboré', slug: 'dreame-a1-pro', why: 'Guidage LiDAR sans satellite, à l’aise sous les arbres, jusqu’à 2 000 m².' }
     ],
     selectionNote: 'Caractéristiques relevées sur les pages fabricants ou fiches Amazon.fr le 27 novembre 2026. Robots non testés par l’éditeur.',
     compare: [{ key: 'guidage', label: 'Guidage' }, { key: 'surface', label: 'Surface max' }, { key: 'pente', label: 'Pente max' }, { key: 'hauteur', label: 'Hauteur de coupe' }],
@@ -412,10 +414,12 @@ export const hubs = {
     metaTitle: 'Robot de piscine : comparatif filaire et sans fil',
     description: 'Huit robots de piscine comparés : filaires, sans fil, skimmer solaire. Zones nettoyées, taille de bassin, autonomie et filtration.',
     lead: 'Type de bassin, zones à nettoyer, câble ou batterie : huit robots comparés pour trouver celui qui correspond à votre piscine.',
-    quick: [
-      { label: 'Petit bassin', title: 'Filaire fond + parois', text: 'Léger, simple, efficace jusqu’à 9 × 4 m environ.' },
-      { label: 'Simplicité', title: 'Sans fil', text: 'On le pose dans l’eau et c’est parti. À recharger après chaque cycle.' },
-      { label: 'Sous les arbres', title: 'Skimmer solaire', text: 'Ramasse feuilles et insectes en surface, en complément.' }
+    updatedAt: '2026-11-28',
+    picks: [
+      { label: 'Petit bassin', slug: 'zodiac-tornax-gt3220', why: 'Filaire léger (5,5 kg) pour bassins jusqu’à 9 × 4 m, enterrés ou hors-sol rigides.' },
+      { label: 'Bassin familial', slug: 'zodiac-cnx-20', why: 'Fond, parois et ligne d’eau jusqu’à 10 × 5 m, grand filtre cyclonique de 4 L.' },
+      { label: 'Sans fil, sans appli', slug: 'dolphin-liberty-300', why: 'Batterie 150 min, recharge par induction, enterrée et hors-sol jusqu’à 10 m.' },
+      { label: 'Grand bassin, confort', slug: 'beatbot-aquasense-2', why: 'Remonte seul en surface pour être récupéré, jusqu’à 300 m².' }
     ],
     selectionNote: 'Caractéristiques relevées sur les pages fabricants ou fiches Amazon.fr le 27 novembre 2026. Robots non testés par l’éditeur.',
     compare: [{ key: 'nettoie', label: 'Nettoie' }, { key: 'alim', label: 'Alimentation' }, { key: 'duree', label: 'Cycle / autonomie' }, { key: 'bassin', label: 'Bassin max' }],
@@ -431,6 +435,28 @@ export const hubs = {
       { q: 'Un robot pour piscine enterrée va-t-il dans un hors-sol ?', a: 'Pas forcément. Vérifiez la compatibilité indiquée par le fabricant, en particulier pour les bassins à parois souples.' }
     ]
   }
+}
+
+// FAQ des fiches produits : réponses construites à partir des données de la fiche, sans ajout.
+export function productFaq(p) {
+  const t = p.table
+  const tested = { q: `Le ${p.name} a-t-il été testé par Le Robot Idéal ?`, a: 'Non. Cette fiche est documentaire : elle s’appuie sur les caractéristiques publiées par le fabricant ou le marchand, avec leur source et leur date de vérification. Les écarts entre sources sont signalés.' }
+  if (p.category === 'tondeuse') {
+    const wire = t.guidage.startsWith('Fil')
+    const sky = /RTK/.test(t.guidage) ? ' Il a besoin d’une bonne vue du ciel' + (/NRTK|NetRTK/.test(t.guidage) ? ' et d’une couverture mobile correcte au jardin.' : '.') : ''
+    return [
+      { q: `Quelle surface peut tondre le ${p.name} ?`, a: `Le fabricant annonce jusqu’à ${t.surface}. Prévoyez 20 à 30 % de marge si le terrain a beaucoup de recoins ou si l’herbe pousse vite au printemps.` },
+      { q: `Le ${p.name} a-t-il besoin d’un fil périmétrique ?`, a: wire ? `Oui. Il se guide avec un fil périphérique à poser ou enterrer autour de la pelouse (${t.guidage.toLowerCase()}).` : `Non. Il se repère sans fil, par ${t.guidage}.${sky}` },
+      { q: `Quelle pente le ${p.name} peut-il gravir ?`, a: `${t.pente} selon le fabricant. Mesurez la pente la plus raide de votre terrain, pas la pente moyenne.` },
+      tested
+    ]
+  }
+  return [
+    { q: `Quelles zones le ${p.name} nettoie-t-il ?`, a: `${t.nettoie}.` },
+    { q: `Le ${p.name} est-il filaire ou sur batterie ?`, a: `${t.alim}. Cycle ou autonomie : ${t.duree}.` },
+    { q: `Pour quelle taille de piscine ?`, a: t.bassin ? `Jusqu’à ${t.bassin} selon le fabricant. Vérifiez aussi la compatibilité avec votre type de bassin (enterré, hors-sol rigide ou souple).` : 'La taille de bassin maximale n’est pas confirmée par une source primaire. Interrogez le vendeur avant d’acheter pour un grand bassin.' },
+    tested
+  ]
 }
 
 export const guideBySlug = slug => guides.find(g => g.slug === slug)
