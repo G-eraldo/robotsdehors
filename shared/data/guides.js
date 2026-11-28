@@ -389,7 +389,7 @@ export const hubs = {
     description: 'Sept robots tondeuses comparés : fil périmétrique, RTK, vision et LiDAR. Surface, pente, hauteur de coupe, avec leurs limites.',
     lead: 'Fil ou pas fil, petit ou grand terrain, pentes et arbres : sept robots comparés sur les données de leurs fabricants.',
     updatedAt: '2026-11-28',
-    quick: [
+    picks: [
       { label: 'Petit jardin simple', slug: 'worx-landroid-plus-wr165e', why: 'Jusqu’à 500 m² avec fil : fiable, indépendant du ciel et du réseau, appli et capteur de pluie.' },
       { label: 'Rien à installer', slug: 'segway-navimow-i205-awd', why: 'Ni fil ni antenne (RTK réseau + caméra), 3 roues motrices, jusqu’à 500 m² et 45 % de pente.' },
       { label: 'Terrain très pentu', slug: 'mammotion-luba-mini-2-awd-1000', why: 'La plus forte pente annoncée de la sélection (80 %), jusqu’à 1 000 m², disque de bordure.' },
@@ -415,7 +415,7 @@ export const hubs = {
     description: 'Huit robots de piscine comparés : filaires, sans fil, skimmer solaire. Zones nettoyées, taille de bassin, autonomie et filtration.',
     lead: 'Type de bassin, zones à nettoyer, câble ou batterie : huit robots comparés pour trouver celui qui correspond à votre piscine.',
     updatedAt: '2026-11-28',
-    quick: [
+    picks: [
       { label: 'Petit bassin', slug: 'zodiac-tornax-gt3220', why: 'Filaire léger (5,5 kg) pour bassins jusqu’à 9 × 4 m, enterrés ou hors-sol rigides.' },
       { label: 'Bassin familial', slug: 'zodiac-cnx-20', why: 'Fond, parois et ligne d’eau jusqu’à 10 × 5 m, grand filtre cyclonique de 4 L.' },
       { label: 'Sans fil, sans appli', slug: 'dolphin-liberty-300', why: 'Batterie 150 min, recharge par induction, enterrée et hors-sol jusqu’à 10 m.' },
@@ -435,6 +435,28 @@ export const hubs = {
       { q: 'Un robot pour piscine enterrée va-t-il dans un hors-sol ?', a: 'Pas forcément. Vérifiez la compatibilité indiquée par le fabricant, en particulier pour les bassins à parois souples.' }
     ]
   }
+}
+
+// FAQ des fiches produits : réponses construites à partir des données de la fiche, sans ajout.
+export function productFaq(p) {
+  const t = p.table
+  const tested = { q: `Le ${p.name} a-t-il été testé par Le Robot Idéal ?`, a: 'Non. Cette fiche est documentaire : elle s’appuie sur les caractéristiques publiées par le fabricant ou le marchand, avec leur source et leur date de vérification. Les écarts entre sources sont signalés.' }
+  if (p.category === 'tondeuse') {
+    const wire = t.guidage.startsWith('Fil')
+    const sky = /RTK/.test(t.guidage) ? ' Il a besoin d’une bonne vue du ciel' + (/NRTK|NetRTK/.test(t.guidage) ? ' et d’une couverture mobile correcte au jardin.' : '.') : ''
+    return [
+      { q: `Quelle surface peut tondre le ${p.name} ?`, a: `Le fabricant annonce jusqu’à ${t.surface}. Prévoyez 20 à 30 % de marge si le terrain a beaucoup de recoins ou si l’herbe pousse vite au printemps.` },
+      { q: `Le ${p.name} a-t-il besoin d’un fil périmétrique ?`, a: wire ? `Oui. Il se guide avec un fil périphérique à poser ou enterrer autour de la pelouse (${t.guidage.toLowerCase()}).` : `Non. Il se repère sans fil, par ${t.guidage}.${sky}` },
+      { q: `Quelle pente le ${p.name} peut-il gravir ?`, a: `${t.pente} selon le fabricant. Mesurez la pente la plus raide de votre terrain, pas la pente moyenne.` },
+      tested
+    ]
+  }
+  return [
+    { q: `Quelles zones le ${p.name} nettoie-t-il ?`, a: `${t.nettoie}.` },
+    { q: `Le ${p.name} est-il filaire ou sur batterie ?`, a: `${t.alim}. Cycle ou autonomie : ${t.duree}.` },
+    { q: `Pour quelle taille de piscine ?`, a: t.bassin ? `Jusqu’à ${t.bassin} selon le fabricant. Vérifiez aussi la compatibilité avec votre type de bassin (enterré, hors-sol rigide ou souple).` : 'La taille de bassin maximale n’est pas confirmée par une source primaire. Interrogez le vendeur avant d’acheter pour un grand bassin.' },
+    tested
+  ]
 }
 
 export const guideBySlug = slug => guides.find(g => g.slug === slug)

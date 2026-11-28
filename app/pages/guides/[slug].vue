@@ -26,8 +26,9 @@ usePageSeo({
     datePublished: guide.publishedAt,
     dateModified: guide.updatedAt,
     inLanguage: 'fr-FR',
+    image: `https://${site.domain}/og.png`,
     author: { '@type': 'Person', name: site.publisher.name },
-    publisher: { '@type': 'Organization', name: site.name },
+    publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: `https://${site.domain}/logo.png` } },
     mainEntityOfPage: `https://${site.domain}${path}`
   }]
 })

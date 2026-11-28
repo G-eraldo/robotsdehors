@@ -1,7 +1,7 @@
 <script setup>
 import { site, categoryBySlug } from '#shared/data/site.js'
 import { productBySlug, productsByCategory } from '#shared/data/products.js'
-import { guideBySlug } from '#shared/data/guides.js'
+import { guideBySlug, productFaq } from '#shared/data/guides.js'
 import { amazonUrl } from '~/composables/usePageSeo.js'
 
 const route = useRoute()
@@ -16,11 +16,13 @@ const path = `/${cat.slug}/${product.slug}`
 // La source Amazon passe aussi par le lien partenaire (et donc rel=sponsored).
 const isAmazonSource = product.sourceUrl.startsWith('https://www.amazon.fr/')
 const sourceHref = isAmazonSource ? (amazonUrl(product.asin, useRuntimeConfig().public.amazonTag) || product.sourceUrl) : product.sourceUrl
+const faq = productFaq(product)
 usePageSeo({
   title: product.name.length > 34 ? product.name : `${product.name} : avis et fiche`,
   description: `${product.name} (${product.type}) : ${product.bestFor}`.slice(0, 158),
   path,
-  breadcrumbs: [[cat.label, `/${cat.slug}`], [product.name, path]]
+  breadcrumbs: [[cat.label, `/${cat.slug}`], [product.name, path]],
+  jsonLd: [{ '@type': 'FAQPage', mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }]
 })
 </script>
 
@@ -36,7 +38,13 @@ usePageSeo({
       <div>
         <p class="text-sm font-medium uppercase tracking-[0.08em]" :style="{ color: cat.color }">{{ product.brand }} · {{ product.type }}</p>
         <h1 class="mt-2 text-[clamp(2rem,4.4vw,3.1rem)] font-semibold leading-[1.05] tracking-[-0.035em]">{{ product.name }}</h1>
-        <p class="mt-4 text-lg leading-relaxed text-ink/80">{{ product.bestFor }}</p>
+        <div class="mt-5 rounded-2xl border border-line bg-surface/70 p-4">
+          <p class="text-[1.05rem] leading-relaxed"><strong class="font-semibold">En bref :</strong> {{ product.bestFor }}</p>
+          <ul class="mt-2.5 space-y-1 text-sm text-ink/80">
+            <li><span class="font-medium text-leaf">Le plus :</span> {{ product.strengths[0] }}.</li>
+            <li><span class="font-medium text-accent-ink">À savoir :</span> {{ product.limits[0] }}.</li>
+          </ul>
+        </div>
         <dl class="mt-6 grid grid-cols-2 gap-3">
           <div v-for="[k, v] in product.keySpecs" :key="k" class="rounded-2xl bg-surface px-4 py-3 shadow-card">
             <dt class="text-xs text-muted">{{ k }}</dt>
@@ -47,30 +55,31 @@ usePageSeo({
           <AmazonButton :asin="product.asin" size="lg" />
           <p class="text-xs leading-snug text-muted">Lien partenaire Amazon.<br>Prix et disponibilité sur la page du marchand.</p>
         </div>
+        <p class="mt-5 text-xs text-muted">Fiche rédigée par <NuxtLink to="/a-propos" class="underline underline-offset-2 hover:text-ink">{{ site.publisher.name }}</NuxtLink> · données vérifiées le {{ checked }}</p>
       </div>
     </section>
 
     <div class="mt-16 grid gap-12 lg:grid-cols-[minmax(0,1fr)_20rem]">
       <article class="min-w-0">
-        <h2 class="text-[1.6rem] font-semibold tracking-[-0.02em]">Notre lecture</h2>
+        <h2 class="text-[1.6rem] font-semibold tracking-[-0.02em]">Que vaut le {{ product.name }} ?</h2>
         <ContentBlocks class="mt-4" :blocks="product.verdict" />
 
         <div class="mt-10 grid gap-4 sm:grid-cols-2">
           <div class="rounded-[var(--radius-card)] bg-surface p-6 shadow-card">
-            <h2 class="font-semibold">Points forts</h2>
+            <h2 class="font-semibold">Quels sont ses points forts ?</h2>
             <ul class="mt-3 space-y-2.5 text-[0.95rem]">
               <li v-for="s in product.strengths" :key="s" class="flex gap-2.5"><span class="mt-[0.45rem] size-1.5 shrink-0 rounded-full bg-leaf" />{{ s }}</li>
             </ul>
           </div>
           <div class="rounded-[var(--radius-card)] bg-surface p-6 shadow-card">
-            <h2 class="font-semibold">Limites</h2>
+            <h2 class="font-semibold">Quelles sont ses limites ?</h2>
             <ul class="mt-3 space-y-2.5 text-[0.95rem]">
               <li v-for="s in product.limits" :key="s" class="flex gap-2.5"><span class="mt-[0.45rem] size-1.5 shrink-0 rounded-full bg-accent" />{{ s }}</li>
             </ul>
           </div>
         </div>
 
-        <h2 class="mt-14 text-[1.6rem] font-semibold tracking-[-0.02em]">Caractéristiques</h2>
+        <h2 class="mt-14 text-[1.6rem] font-semibold tracking-[-0.02em]">Quelles sont ses caractéristiques ?</h2>
         <dl class="mt-4 divide-y divide-line overflow-hidden rounded-[var(--radius-card)] bg-surface shadow-card">
           <div v-for="[k, v] in product.specs" :key="k" class="grid grid-cols-[minmax(0,11rem)_1fr] gap-4 px-5 py-3 text-[0.95rem]">
             <dt class="text-muted">{{ k }}</dt><dd class="font-medium">{{ v }}</dd>
@@ -80,6 +89,9 @@ usePageSeo({
           Source : <a :href="sourceHref" target="_blank" :rel="isAmazonSource ? 'sponsored nofollow noopener' : 'noopener'" class="underline underline-offset-2">{{ product.sourceLabel }}</a>, vérifiée le {{ checked }}.
           Fiche documentaire : {{ site.name }} n’a pas testé cet appareil.
         </p>
+
+        <h2 class="mt-14 text-[1.6rem] font-semibold tracking-[-0.02em]">Questions fréquentes</h2>
+        <FaqList class="mt-4" :items="faq" />
       </article>
 
       <aside class="space-y-4 lg:sticky lg:top-24 lg:self-start">

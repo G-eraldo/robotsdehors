@@ -12,7 +12,7 @@ usePageSeo({
   path: '/',
   jsonLd: [
     { '@type': 'WebSite', name: site.name, url: `https://${site.domain}/`, inLanguage: 'fr-FR' },
-    { '@type': 'Organization', name: site.name, url: `https://${site.domain}/`, founder: { '@type': 'Person', name: site.publisher.name } }
+    { '@type': 'Organization', name: site.name, url: `https://${site.domain}/`, logo: `https://${site.domain}/logo.png`, founder: { '@type': 'Person', name: site.publisher.name } }
   ]
 })
 </script>
