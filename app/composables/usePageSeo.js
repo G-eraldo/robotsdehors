@@ -17,7 +17,9 @@ export function usePageSeo({ title, description, path, type = 'website', noindex
       itemListElement: [['Accueil', '/'], ...breadcrumbs].map(([name, p], i) => ({ '@type': 'ListItem', position: i + 1, name, item: base + p }))
     })
   }
-  const fullTitle = path === '/' ? `${site.name} · ${site.tagline}` : `${title} · ${site.name}`
+  // Le suffixe de marque saute si le titre dépasserait 65 caractères : le mot-clé passe avant la marque.
+  const branded = `${title} · ${site.name}`
+  const fullTitle = path === '/' ? `${site.name} · ${site.tagline}` : (branded.length > 65 ? title : branded)
 
   useSeoMeta({
     title: fullTitle,

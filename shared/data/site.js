@@ -1,7 +1,7 @@
 // Identité et structure du site. Les contenus vivent dans products.js et guides.js.
 export const site = {
-  name: 'Robots Dehors',
-  domain: 'robotsdehors.fr',
+  name: 'Le Robot Idéal',
+  domain: 'lerobotideal.fr',
   tagline: 'Robot tondeuse et robot de piscine bien choisis',
   description: 'Guides d’achat et fiches vérifiées pour choisir un robot tondeuse ou un robot de piscine adapté à votre terrain et à votre bassin.',
   themeColor: '#f4f7f4',

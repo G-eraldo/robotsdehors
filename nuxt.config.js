@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   vite: { plugins: [tailwindcss()] },
   runtimeConfig: {
     public: {
-      siteUrl: 'https://robotsdehors.fr',
+      siteUrl: 'https://lerobotideal.fr',
       siteLive: false,
       amazonTag: ''
     }

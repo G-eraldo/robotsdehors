@@ -1,15 +1,15 @@
-# Robots Dehors — suivi
+# Le Robot Idéal — suivi
 
 ## Fait (27/11/2026)
-- [x] Socle Nuxt 4 SSR + Tailwind 4, design vert/bleu avec hero sombre (≠ DomoKlub et Climadoux).
+- [x] Socle Nuxt 4 SSR + Tailwind 4, design vert/bleu avec hero sombre (≠ DomoKlub et Le Climat Idéal).
 - [x] 2 rubriques (robots tondeuses, robots de piscine) avec tableau comparatif, FAQ, JSON-LD.
 - [x] 15 fiches produits, ASIN vérifiés un par un sur amazon.fr ; écarts entre sources signalés sur les fiches.
 - [x] 4 guides (2 piliers + fil/sans fil, filaire/sans fil).
 - [x] Pages de confiance, robots/sitemap/llms.txt, `check:content` et `check:seo` (29 pages OK).
 
 ## Pour mettre en ligne (à faire par l’éditeur)
-- [ ] Acheter `robotsdehors.fr`.
-- [ ] Identifiant de suivi Amazon dédié (ex. `robotsdehors-21`), site ajouté au compte Partenaires.
+- [x] Domaine `lerobotideal.fr` acheté (28/11/2026).
+- [ ] Identifiant de suivi Amazon dédié (ex. `lerobotideal-21`), site ajouté au compte Partenaires.
 - [ ] Dépôt GitHub + Dokploy (voir README), `NUXT_PUBLIC_SITE_LIVE=true`, Search Console.
 
 ## Avant le printemps (saison mars–juin)

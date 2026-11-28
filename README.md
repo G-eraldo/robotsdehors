@@ -1,4 +1,4 @@
-# Robots Dehors
+# Le Robot Idéal
 
 Site d’affiliation Amazon consacré aux robots tondeuses et robots de piscine. Nuxt 4 (SSR) + Tailwind CSS 4, contenus dans le code, déployé sur Dokploy.
 
@@ -29,7 +29,7 @@ Règles éditoriales (formation SEO) : une intention par page, réponse courte e
 ## Variables d’environnement (Dokploy)
 
 ```text
-NUXT_PUBLIC_SITE_URL=https://robotsdehors.fr
+NUXT_PUBLIC_SITE_URL=https://lerobotideal.fr
 NUXT_PUBLIC_SITE_LIVE=true        # false = recette (noindex, robots.txt bloquant, sitemap vide)
 NUXT_PUBLIC_AMAZON_TAG=xxxxx-21   # identifiant de suivi propre à ce site
 ```
@@ -41,7 +41,7 @@ Sans `NUXT_PUBLIC_AMAZON_TAG`, les boutons Amazon ne s’affichent pas en produc
 1. Créer un dépôt GitHub et pousser `main`.
 2. Dans Dokploy : nouvelle application, source GitHub, build type **Dockerfile**, port **3000**.
 3. Renseigner les variables ci-dessus (d’abord `SITE_LIVE=false` sur le domaine provisoire).
-4. Ajouter le domaine `robotsdehors.fr` (+ `www` en redirection), HTTPS Let’s Encrypt.
+4. Ajouter le domaine `lerobotideal.fr` (+ `www` en redirection), HTTPS Let’s Encrypt.
 5. Passer `NUXT_PUBLIC_SITE_LIVE=true`, redéployer, puis déclarer le site et `/sitemap.xml` dans Google Search Console et Bing Webmaster Tools.
 
 Saison haute : mars à juin. Mettre en ligne dès que possible pour être indexé avant le printemps, et compléter les contenus en janvier-février.

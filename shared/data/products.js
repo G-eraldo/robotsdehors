@@ -1,4 +1,4 @@
-// Catalogue Robots Dehors. ASIN contrôlés un par un sur amazon.fr le 27 novembre 2026 (titre = modèle exact).
+// Catalogue Le Robot Idéal. ASIN contrôlés un par un sur amazon.fr le 27 novembre 2026 (titre = modèle exact).
 // Caractéristiques : page du fabricant quand elle était lisible, sinon fiche Amazon.fr. Les valeurs Amazon
 // manifestement fausses ne sont pas reprises. Donnée absente = non publiée. Aucun prix, aucune note.
 // Fiches documentaires : aucun de ces robots n'a été testé par l'éditeur.
